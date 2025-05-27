@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "Outfit-Variable";
+  src: url(../assets/fonts/outfit/Outfit-VariableFont_wght.ttf)
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Young-serif";
+  src: url(../assets/fonts/young-serif/YoungSerif-Regular.ttf)
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+
+  --Stone-100: hsl(30, 54%, 90%);
+  --Stone-150: hsl(30, 18%, 87%);
+  --Stone-600: hsl(30, 10%, 34%);
+  --Stone-900: hsl(24, 5%, 18%);
+
+  --Brown-800: hsl(14, 45%, 36%);
+
+  --Rose-800: hsl(332, 51%, 32%);
+  --Rose-50: hsl(330, 100%, 98%);
+}
+
+body {
+  font-family: "Outfit-Variable", sans-serif;
+  font-size: 1rem;
+  background-color: var(--Stone-100);
+  color: var(--Stone-600);
+  width: 100%;
+  line-height: normal;
+  display: grid;
+  place-content: center;
+}
+
+.recipe-container {
+  margin: 0 auto;
+  max-width: 50%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: var(--White);
+}
+
+.recipe-image {
+  border-radius: 0.5rem;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  font-family: "Young-serif", sans-serif;
+  padding-block: 1rem;
+}
+
+h1 {
+  font-size: calc(1.25rem + 1vw);
+  color: var(--Stone-900);
+}
+
+h2 {
+  font-size: calc(.75rem + 1vw);
+  color: var(--Brown-800);
+}
+
+h3 {
+  padding-block-end: 0.5rem;
+  color: var(--Rose-800);
+}
+
+.preparation-time {
+  background-color: var(--Rose-50);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+ul,
+ol {
+  padding-inline-start: 2rem;
+}
+
+li {
+  padding-block: 0.25rem;
+  padding-inline-start: 0.5rem;
+}
+
+.hr {
+  margin-block-start: 1rem;
+  height: 1px;
+  background-color: var(--Stone-150);
+  border: none;
+}
+
+.recipe-details {
+  padding-block-end: 1rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.nutrition-list {
+  padding-block-end: .5rem;
+}
+.nutrition {
+  padding-block: 0.5rem;
+  padding-inline-start: 1.25rem;
+  width: 49%;
+  display: inline-block;
+}
+
+.border {
+  border: none;
+  height: 1px;
+  background-color: var(--Stone-150);
+}
+
+.attribution {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  font-size: 11px;
+  text-align: center;
+}
+
+.value {
+  color: var(--Brown-800);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
