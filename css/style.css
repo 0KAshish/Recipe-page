@@ -35,7 +35,7 @@
 
 body {
   font-family: "Outfit-Variable", sans-serif;
-  font-size: 1rem;
+  font-size: clamp(.875, 1vw, 1rem);
   background-color: var(--Stone-100);
   color: var(--Stone-600);
   width: 100%;
@@ -46,7 +46,7 @@ body {
 
 .recipe-container {
   margin: 0 auto;
-  max-width: 50%;
+  max-width: 100%;
   padding: 1.5rem;
   border-radius: 1rem;
   background-color: var(--White);
@@ -65,7 +65,7 @@ h2 {
 }
 
 h1 {
-  font-size: calc(1.25rem + 1vw);
+  font-size: clamp(1.25rem, 1vw, 2rem);
   color: var(--Stone-900);
 }
 
@@ -93,6 +93,10 @@ ol {
 li {
   padding-block: 0.25rem;
   padding-inline-start: 0.5rem;
+}
+
+ol li::marker {
+  color: var(--Brown-800);
 }
 
 .hr {
@@ -139,8 +143,16 @@ li {
 
 .value {
   color: var(--Brown-800);
+  font-weight: 600;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+ 
+@media screen and (min-width: 375px) {
+  .recipe-container {
+    max-width: 50%;
+    margin: 50px auto;
+  }
 }
